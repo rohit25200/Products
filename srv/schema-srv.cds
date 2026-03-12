@@ -5,4 +5,7 @@ service MyService {
     @odata.draft.enabled
     entity Products as projection on db.Products;
 
+
 }
+
+
