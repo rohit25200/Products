@@ -1,0 +1,33 @@
+POST http://localhost:4004/odata/v4/my/Products
+Content-Type: application/json
+
+{
+
+   "name": "mobile",
+   "category": "Electronics",
+   "price": 5000
+}
+
+
+###
+GET http://localhost:4004/odata/v4/my/Products
+
+###
+PUT http://localhost:4004/odata/v4/my/Products(125c5f49-45eb-4592-9638-896d8e81786f)
+Content-Type: application/json
+Accept: application/json
+If-Match: *
+
+{
+  "name": "Phone"
+}
+
+### PATCH: update price only
+PATCH http://localhost:4004/odata/v4/my/Products(125c5f49-45eb-4592-9638-896d8e81786f)
+Content-Type: application/json
+Accept: application/json
+If-Match: *
+
+{
+  "price": 15
+}
